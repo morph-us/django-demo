@@ -16,7 +16,16 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls', namespace='blog')),
 ]
+
+# After uncommenting below lines, the view and endpoint show but the app
+# won't work.
+# from django.urls import path
+# urlpatterns = [
+#     path(r'^admin/', admin.site.urls),
+#     path(r'', include('blog.urls', namespace='blog')),
+# ]
